@@ -158,7 +158,8 @@ public class DeployerCommand implements Constants {
                     .withApplicationName(getApplicationName())
                     .withAutoCreateApplication(true)
                     .withSourceBundle(new S3Location(getBucketName(), getObjectKey()))
-                    .withVersionLabel(getVersionLabel());
+                    .withVersionLabel(getVersionLabel())
+                    .withDescription("Test");
 
             final CreateApplicationVersionResult result = getAwseb().createApplicationVersion(cavRequest);
 
